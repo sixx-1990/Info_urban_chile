@@ -1,0 +1,24 @@
+
+// app/utils/regiones_chile.ts
+
+export const REGIONES_CHILE_BASICO = Object.freeze({
+    ARICA_PARINACOTA: { numero: 'XV', nombre: 'Arica y Parinacota', api_id: 1 },
+    TARAPACA: { numero: 'I', nombre: 'Tarapacá', api_id: 2 },
+    ANTOFAGASTA: { numero: 'II', nombre: 'Antofagasta', api_id: 3 },
+    ATACAMA: { numero: 'III', nombre: 'Atacama', api_id: 4 },
+    COQUIMBO: { numero: 'IV', nombre: 'Coquimbo', api_id: 5 },
+    VALPARAISO: { numero: 'V', nombre: 'Valparaíso', api_id: 6 },
+    METROPOLITANA: { numero: 'RM', nombre: 'Metropolitana de Santiago', api_id: 7 },
+    OHIGGINS: { numero: 'VI', nombre: 'Libertador General Bernardo O\'Higgins', api_id: 8 },
+    MAULE: { numero: 'VII', nombre: 'Maule', api_id: 9 },
+    NUBLE: { numero: 'XVI', nombre: 'Ñuble', api_id: 10 },
+    BIOBIO: { numero: 'VIII', nombre: 'Biobío', api_id: 11 },
+    ARAUCANIA: { numero: 'IX', nombre: 'La Araucanía', api_id: 12 },
+    LOS_RIOS: { numero: 'XIV', nombre: 'Los Ríos', api_id: 13 },
+    LOS_LAGOS: { numero: 'X', nombre: 'Los Lagos', api_id: 14 },
+    AYSEN: { numero: 'XI', nombre: 'Aysén del General Carlos Ibáñez del Campo', api_id: 15 },
+    MAGALLANES: { numero: 'XII', nombre: 'Magallanes y de la Antártica Chilena', api_id: 16 },
+});
+
+// Array para definir el orden geográfico correcto de las regiones (Norte a Sur).
+export const REGION_ORDER = [15, 1, 2, 3, 4, 5, 13, 6, 7, 16, 8, 9, 14, 10, 11, 12];
