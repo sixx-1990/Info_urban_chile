@@ -21,7 +21,7 @@ function estadoGeneral(metroData) {
 export default async function MetroPage() {
     const metroData = await getMetroData();
 
-    var mensajeStatus = estadoGeneral(metroData);
+    let mensajeStatus = estadoGeneral(metroData);
 
     return (
          <div className="min-h-screen bg-gray-50 p-8">

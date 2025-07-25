@@ -3,7 +3,7 @@ import {getData} from './fetcher';
 
 
 const api_endpoint = 'https://api.xor.cl/red/metro-network'; 
-var data : any;
+let data : unknown;
 
 
 export async function getMetroData() {

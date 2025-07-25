@@ -2,7 +2,7 @@ import React from 'react';
 import { ListaFarmacias } from '../../lib/api/farmacias_api';
 
 export default async function FarmaciaPage() {
-    var farmacias = await ListaFarmacias();
+    let farmacias = await ListaFarmacias();
 
     farmacias =farmacias.sort((a, b) => {
         if (a.fk_region < b.fk_region) return -1;

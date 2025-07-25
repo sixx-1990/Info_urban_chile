@@ -3,7 +3,7 @@ import { getData } from './fetcher';
 
 
 const api_endpoint = 'https://midas.minsal.cl/farmacia_v2/WS/getLocalesTurnos.php';
-var data: any;
+let data: unknown;
 
 
 async function getFarmaciasData() {
