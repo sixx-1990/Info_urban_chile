@@ -3,14 +3,15 @@ import { ListaFarmacias } from '../../lib/api/farmacias_api';
 
 export default async function FarmaciaPage() {
     let farmacias = await ListaFarmacias();
-    if (array.isarray( farmacias)) {
-    farmacias =farmacias.sort((a, b) => {
-        if (a.fk_region < b.fk_region) return -1;
-        //if (a.comuna_nombre < b.comuna_nombre) return -1;
-        //if (a.localidad_nombre < b.localidad_nombre) return -1;        
+    if (array.isarray(farmacias)) {
+        farmacias = farmacias.sort((a, b) => {
+            if (a.fk_region < b.fk_region) return -1;
+            //if (a.comuna_nombre < b.comuna_nombre) return -1;
+            //if (a.localidad_nombre < b.localidad_nombre) return -1;        
 
-        return 0;
-    });
+            return 0;
+        });
+    }
 
 
 
@@ -74,16 +75,16 @@ export default async function FarmaciaPage() {
                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                         {farmacia.local_telefono}
                                     </td>
-                                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        { farmacia.funcionamiento_dia} 
-                                        
-                                    </td>
-                                    
                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        { farmacia.funcionamiento_hora_apertura + "  -  " + farmacia.funcionamiento_hora_cierre} 
-                                        
+                                        {farmacia.funcionamiento_dia}
+
                                     </td>
-                                  
+
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                        {farmacia.funcionamiento_hora_apertura + "  -  " + farmacia.funcionamiento_hora_cierre}
+
+                                    </td>
+
                                 </tr>
                             ))}
 
