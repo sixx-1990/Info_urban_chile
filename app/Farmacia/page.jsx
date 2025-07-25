@@ -3,7 +3,7 @@ import { ListaFarmacias } from '../../lib/api/farmacias_api';
 
 export default async function FarmaciaPage() {
     let farmacias = await ListaFarmacias();
-
+    if (array.isarray( farmacias)) {
     farmacias =farmacias.sort((a, b) => {
         if (a.fk_region < b.fk_region) return -1;
         //if (a.comuna_nombre < b.comuna_nombre) return -1;
