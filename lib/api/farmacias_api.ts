@@ -9,19 +9,26 @@ let data: unknown;
 async function getFarmaciasData() {
 
     try {
-        data = await getData(api_endpoint);
-       
+        data = await getData(api_endpoint, {
+            method: 'GET',
+            headers: {
+                'User-Agent': 'Mozilla/5.0',       
+                'Accept': 'application/json',
+                'Referer': 'https://hoppscotch.io'
+            }
+        });
+
         return data;
     } catch (error) {
         console.error('Error fetching metro data:', error);
     }
 
- return data
+    return data
 }
 
 export async function ListaFarmacias() {
     if (!data) await getFarmaciasData();
-     console.log(data);
+    console.log(data);
     return data;
 }
 
