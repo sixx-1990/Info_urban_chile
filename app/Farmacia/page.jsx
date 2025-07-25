@@ -2,16 +2,24 @@ import React from 'react';
 import { ListaFarmacias } from '../../lib/api/farmacias_api';
 
 export default async function FarmaciaPage() {
-    let farmacias = await ListaFarmacias();
+    let farmacias = [];
 
-    if (Array.isArray(farmacias)) {
-        farmacias = farmacias.sort((a, b) => {
-            if (a.fk_region < b.fk_region) return -1;
-            //if (a.comuna_nombre < b.comuna_nombre) return -1;
-            //if (a.localidad_nombre < b.localidad_nombre) return -1;        
 
-            return 0;
-        });
+    try {
+         farmacias = await ListaFarmacias();
+        farmacias = await ListaFarmacias();
+        if (Array.isArray(farmacias)) {
+            farmacias = farmacias.sort((a, b) => {
+                if (a.fk_region < b.fk_region) return -1;
+                //if (a.comuna_nombre < b.comuna_nombre) return -1;
+                //if (a.localidad_nombre < b.localidad_nombre) return -1;        
+
+                return 0;
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching farmacias:', error);
+        farmacias = [];
     }
 
 
