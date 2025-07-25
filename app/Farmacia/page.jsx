@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from 'react'
 
 export default function FarmaciaPage() {
-  const [farmacias, setFarmacias] = useState<Array<unknown>>([])
+  
+  const [farmacias, setFarmacias] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
