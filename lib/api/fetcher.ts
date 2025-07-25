@@ -1,7 +1,7 @@
 import next from 'next';
 import { unstable_cache as noStore } from 'next/cache';
 
-export async function getData(endpoint: string) {
+export async function getData(endpoint: string,init?: RequestInit): Promise<unknown> {
   try {
     const response = await fetch(endpoint, { next: { revalidate: 60 } });
 
